@@ -1,4 +1,4 @@
-# Channel Strip MIDI Controller - M4L Device
+# Selected Track MIDI Mapper - M4L Device
 
 An M4L device for Ableton live.
 This device allows you to map a MIDI controller to specific Device Parameters (By device name) on the _selected track_.
