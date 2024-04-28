@@ -13,7 +13,9 @@ When you switch tracks, your controller will control the same Device Name on the
 
 #### Features
 
-- Auto Learn
+- **Auto Learn**: Move a device parameter in the UI, then move the corresponding control, move next param,...
+- **Multiple Devices**: Configure multiple target devices by using multiple STDMapper presets on the same MIDI input track.
+- **Store Mapping in Presets**: Simply store a preset of the STDMapper in order to store you mapping for a specific Controler/Target-Deice pair. (Reuse this preset in other projects)
 
 ### Setup workflow
 
