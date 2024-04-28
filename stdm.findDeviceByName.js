@@ -19,8 +19,8 @@ function getDeviceByName(trackId, deviceName) {
 function _findDeviceWithinRack(rack, deviceName) {
     for (var i = 0; i < rack.getcount('chains'); i++) {
         var chain = new LiveAPI(rack.unquotedpath + ' chains ' + i);
-        for (var i = 0; i < chain.getcount('devices'); i++) {
-            var device = new LiveAPI(chain.unquotedpath + ' devices ' + i);
+        for (var j = 0; j < chain.getcount('devices'); j++) {
+            var device = new LiveAPI(chain.unquotedpath + ' devices ' + j);
             if (device.get('name') == deviceName) {
                 _sendOutDeviceId(device.id);
                 return;
