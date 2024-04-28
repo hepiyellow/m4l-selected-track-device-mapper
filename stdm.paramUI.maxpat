@@ -96,7 +96,6 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-19",
@@ -112,11 +111,13 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-17",
+									"linecount" : 2,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 267.0, 551.4000004529953, 50.0, 22.0 ]
+									"patching_rect" : [ 267.0, 551.4000004529953, 50.0, 22.0 ],
+									"text" : "\"filter env\""
 								}
 
 							}
@@ -525,7 +526,7 @@
 					"patching_rect" : [ 594.0, 573.843930721282959, 107.0, 15.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 25.676055999999999, 3.0, 76.0, 15.0 ],
-					"text" : "Param 1"
+					"text" : "filter env"
 				}
 
 			}
@@ -904,7 +905,7 @@
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "val1", "val2" ],
-							"parameter_longname" : "live.text",
+							"parameter_longname" : "live.text[5]",
 							"parameter_mmax" : 1,
 							"parameter_shortname" : "live.text",
 							"parameter_type" : 2
@@ -983,7 +984,7 @@
 							"parameter_enum" : [ "off", "on" ],
 							"parameter_invisible" : 1,
 							"parameter_linknames" : 1,
-							"parameter_longname" : "param_1_enabled",
+							"parameter_longname" : "param_3_enabled",
 							"parameter_mmax" : 1,
 							"parameter_shortname" : "live.toggle",
 							"parameter_type" : 2
@@ -991,7 +992,7 @@
 
 					}
 ,
-					"varname" : "param_1_enabled"
+					"varname" : "param_3_enabled"
 				}
 
 			}
@@ -1087,7 +1088,7 @@
 					"patching_rect" : [ 463.932284832000732, 569.49641877412796, 24.067715167999268, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 25.588582575321198, 20.0 ],
-					"text" : "1"
+					"text" : "3"
 				}
 
 			}
@@ -1154,7 +1155,7 @@
 						"valueof" : 						{
 							"parameter_invisible" : 1,
 							"parameter_linknames" : 1,
-							"parameter_longname" : "param_1_midi",
+							"parameter_longname" : "param_3_midi",
 							"parameter_shortname" : "live.numbox",
 							"parameter_type" : 1,
 							"parameter_unitstyle" : 0
@@ -1162,7 +1163,7 @@
 
 					}
 ,
-					"varname" : "param_1_midi"
+					"varname" : "param_3_midi"
 				}
 
 			}
