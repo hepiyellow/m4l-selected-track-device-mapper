@@ -1,6 +1,8 @@
 inlets = 1;
-outlets = 1;
+outlets = 2;
 setinletassist(0, "getNames");
+setoutletassist(0, "[param index] [param name]");
+setoutletassist(1, "bang when done");
 
 function getNames(deviceId) {
     var device = LiveAPI('id ' + deviceId)
@@ -9,5 +11,6 @@ function getNames(deviceId) {
         var deviceParam = new LiveAPI(device.unquotedpath + ' parameters ' + i);
         outlet(0, i, deviceParam.get('name'))
     }
+    outlet(1, 'bang')
 }
 
