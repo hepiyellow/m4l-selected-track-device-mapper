@@ -1,3 +1,4 @@
 # TODO
 
 - [ ] Observe selected track devices, if our specified device is added/removed, the update current target Device.
+- [ ] Support also NOTE_ON/OFF messages (not just CC)

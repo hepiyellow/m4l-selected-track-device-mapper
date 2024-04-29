@@ -1,6 +1,8 @@
 inlets = 1;
-outlets = 1;
+outlets = 2;
+
 setinletassist(0, "track id, targetDeviceName");
+setinletassist(1, "bang - when no device found");
 
 function getDeviceByName(trackId, deviceName) {
     var track = new LiveAPI('id ' + trackId);
@@ -11,9 +13,14 @@ function getDeviceByName(trackId, deviceName) {
             return;
         }
         if (device.type == 'RackDevice') {
-            _findDeviceWithinRack(device, deviceName);
+            foundDeviceId = _findDeviceWithinRack(device, deviceName);
+            if (foundDeviceId) {
+                _sendOutDeviceId(foundDeviceId);
+                return;
+            }
         }
     }
+    outlet(1, 'bang');
 }
 
 function _findDeviceWithinRack(rack, deviceName) {
@@ -22,14 +29,17 @@ function _findDeviceWithinRack(rack, deviceName) {
         for (var j = 0; j < chain.getcount('devices'); j++) {
             var device = new LiveAPI(chain.unquotedpath + ' devices ' + j);
             if (device.get('name') == deviceName) {
-                _sendOutDeviceId(device.id);
-                return;
+                return device.id;
             }
             if (device.type == 'RackDevice') {
-                _findDeviceWithinRack(device, deviceName);
+                var foundDeviceId = _findDeviceWithinRack(device, deviceName);
+                if (foundDeviceId) {
+                    return foundDeviceId;
+                }
             }
         }
     }
+    return undefined
 }
 
 function _sendOutDeviceId(id) {
