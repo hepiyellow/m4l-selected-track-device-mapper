@@ -19,6 +19,6 @@ function get() {
     }
 }
 
-function log(msg) {
+function _log(msg) {
     post(msg + '\n')
 }
